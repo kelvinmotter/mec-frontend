@@ -1,0 +1,82 @@
+.example-container {
+  background: rgb(56, 56, 56);
+}
+
+.toolbar-content {
+    border-bottom: 1px solid rgb(223, 220, 220);
+    height: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .toggle-sidenav {
+    margin: 7px;
+  }
+  
+  .sidenav-custom {
+    width: 250px;
+    background-color: rgb(246, 246, 247);
+  }
+  
+  .options-content {
+    margin: 7px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .options-content button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  mat-list-item:hover {
+    background-color: rgb(212, 209, 209);
+    transition: 0.5%;
+    border-radius: 5%;
+    padding: 10px;
+  }
+  mat-icon {
+    
+  }
+  .menu-name {
+    font-size: 15px;
+  }
+  
+  .list-item {
+    fill: white;
+    padding: 10px;
+  }
+  
+  //USER
+  
+  .user-session-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    height: 200px;
+  }
+  
+  .user-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .user-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .user-info span {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+  }

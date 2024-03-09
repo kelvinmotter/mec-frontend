@@ -1,0 +1,32 @@
+<mat-toolbar class="toolbar-content">
+  <div class="toggle-sidenav">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div class="options-content">
+    <button mat-icon-button (click)="toggleFullscreen()">
+      <mat-icon>{{ isFullscreen ? 'fullscreen_exit' : 'fullscreen' }}</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>manage_accounts</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="sidenav-custom" #sidenav mode="side" [(opened)]="opened">
+    <div>
+      <mat-list>
+        @for (menu of menus; track menu) {
+        <mat-list-item class="list-item" [routerLink]="menu.route">
+          <mat-icon matListItemIcon>{{menu.icon}}</mat-icon>
+          <div matListItemTitle class="menu-name">{{menu.name}}</div>
+        </mat-list-item>
+        }
+      </mat-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content style="height: 100vh;">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

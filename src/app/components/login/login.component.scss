@@ -1,0 +1,40 @@
+.login-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  /* Definindo a largura das colunas */
+  background-color: rgb(56, 56, 56);
+  /* Adicione cor de fundo conforme necessário */
+}
+
+.left-content {
+  padding: 10px;
+  background-image: url('../../../assets/login.jpg');
+  /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  /* Garante que a imagem cubra toda a área da div */
+}
+
+.login-content {
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.right-content {
+  padding: 10px;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.forgot-password {
+  float: right;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+mat-form-field {
+  width: 100%;
+}
