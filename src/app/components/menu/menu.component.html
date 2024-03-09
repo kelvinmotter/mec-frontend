@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar-content" color="primary">
+<mat-toolbar class="toolbar-content" color="warn">
   <div class="toggle-sidenav">
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
@@ -14,7 +14,7 @@
   </div>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav class="sidenav-custom" #sidenav mode="side" [(opened)]="opened" color="primary">
+  <mat-sidenav class="sidenav-custom" #sidenav mode="side" [(opened)]="opened">
     <div>
       <mat-list>
         @for (menu of menus; track menu) {

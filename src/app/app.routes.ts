@@ -5,15 +5,17 @@ import { AuthGuard } from './authentication/auth-guard';
 import { CustomerComponent } from './components/customer/customer.component';
 import { SupplierComponent } from './components/supplier/supplier.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
-import { HomeComponent } from './components/home/home.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     {
-        path: '', component: HomeComponent,
+        path: '', component: MenuComponent,
         canActivate: [AuthGuard],
         children: [
+            { path: 'dashboard', component: DashboardComponent },
             { path: 'produtos', component: ProductComponent },
             { path: 'clientes', component: CustomerComponent },
             { path: 'fornecedores', component: SupplierComponent },

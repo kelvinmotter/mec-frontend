@@ -12,7 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { Menu } from '../../interfaces/i-menu';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-menu',
   standalone: true,
   imports: [ MatSidenavModule, 
              MatCheckboxModule, 
@@ -26,16 +26,16 @@ import { Menu } from '../../interfaces/i-menu';
              MatDividerModule, 
              DatePipe,
              RouterOutlet],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  templateUrl: './menu.component.html',
+  styleUrl: './menu.component.scss'
 })
-export class HomeComponent {
+export class MenuComponent {
   menus: Menu[] = [
     {
       id: 1,
-      name: 'Início',
+      name: 'Dashboard',
       icon: 'home',
-      route: "/inicio"
+      route: "/dashboard"
     },
     {
       id: 2,

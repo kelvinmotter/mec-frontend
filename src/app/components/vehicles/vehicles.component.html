@@ -1,6 +1,6 @@
-<div class="container-vehicles">
-    
-    <button mat-raised-button color="primary" style="float: right; margin-top: 10px;">
+<div class="container-vehicles" style="border-radius: 10%;" >
+    <h3>Cadastro de veículos</h3>
+    <button mat-raised-button color="warn" style="float: right; margin-top: 10px;">
         <mat-icon matListItemIcon>add_circle</mat-icon> Adicionar
     </button>
     <mat-form-field>
@@ -9,7 +9,7 @@
     </mat-form-field>
 
     <table class="mat-table-custom" mat-table [dataSource]="dataSource" cdkDropList cdkDropListOrientation="horizontal"
-        (cdkDropListDropped)="drop($event)" matSort>
+        (cdkDropListDropped)="drop($event)" matSort >
 
         <ng-container matColumnDef="placa">
             <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> Placa </th>
